@@ -27,4 +27,10 @@ jobs:
       uses: returntocorp/semgrep-action@v1
       with:
         config: 'p/default'
+        
+    - name: Run OWASP ZAP Baseline
+      uses: zaproxy/action-baseline@v0.6.0
+      with:
+        target: 'https://nodejsscan-sec.vercel.app'
+
 
